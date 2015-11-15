@@ -7,6 +7,6 @@ import eu.luisortiz.epicnasacamera.entity.EpicImage;
  */
 public interface AsyncResponse {
 
-    public EpicImage downloadEpicImage();
+    void processDownloadEpicImage(Object output);
 
 }
