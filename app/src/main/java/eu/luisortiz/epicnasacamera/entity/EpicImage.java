@@ -2,8 +2,6 @@ package eu.luisortiz.epicnasacamera.entity;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.Date;
-
 /**
  * Created by luis on 2/11/15.
  */
