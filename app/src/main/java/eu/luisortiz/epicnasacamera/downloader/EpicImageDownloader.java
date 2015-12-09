@@ -28,11 +28,6 @@ public class EpicImageDownloader extends AsyncTask<String, String, String> {
                     .get();
             Log.d("JSON CONTENT:",doc.text());
             html = doc.text();
-            //TODO Expected BEGIN_OBJECT but was BEGIN_ARRAY at line 1 column 2 path $
-            html = html.replaceAll("\\\\n", " ");
-            html = html.replaceAll("\\\\", "");
-            Log.d("JSON CONTENT:",html);
-
 
         } catch (Exception e) {
             Log.e("ERROR DOWNLOADING JSON", e.getMessage());

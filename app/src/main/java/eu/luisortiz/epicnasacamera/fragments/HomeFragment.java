@@ -3,6 +3,9 @@ package eu.luisortiz.epicnasacamera.fragments;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -10,6 +13,8 @@ import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.nio.channels.AsynchronousCloseException;
+import java.util.ArrayList;
+import java.util.List;
 
 import eu.luisortiz.epicnasacamera.R;
 import eu.luisortiz.epicnasacamera.downloader.AsyncResponse;
@@ -41,7 +46,10 @@ public class HomeFragment extends MyFragment implements AsyncResponse{
     @Override
     public void processDownloadEpicImage(Object output) {
         Gson gson = new Gson();
-        EpicImage epicImageJson = gson.fromJson((String) output, EpicImage.class);
+        EpicImage[] epicImages = gson.fromJson((String) output, EpicImage[].class);
+
+        //TODO El campo coords de EpicImage viene como tipo STRING y no OBJECT en el JSON, hay que extraer los valores y transformarlo en objeto
+
         tvHome.setText((String) output);
 
     }

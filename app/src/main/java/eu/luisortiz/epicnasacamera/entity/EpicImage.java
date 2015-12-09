@@ -11,15 +11,19 @@ public class EpicImage {
 
     @SerializedName("image")
     private String image;
-
     @SerializedName("date")
     private String date;
-
     @SerializedName("caption")
     private String caption;
-
     @SerializedName("coords")
-    private Coords coords;
+    private String coords;
+
+    public EpicImage(String image, String date, String caption, String coords) {
+        this.image = image;
+        this.date = date;
+        this.caption = caption;
+        this.coords = coords;
+    }
 
     public String getImage() {
         return image;
@@ -45,18 +49,13 @@ public class EpicImage {
         this.caption = caption;
     }
 
-    public Coords getCoords() {
+    public String getCoords() {
         return coords;
     }
 
-    public void setCoords(Coords coords) {
+    public void setCoords(String coords) {
         this.coords = coords;
     }
 
-    public EpicImage(String image, String date, String caption, Coords coords){
-        this.image = image;
-        this.date = date;
-        this.caption = caption;
-        this.coords = coords;
-    }
+
 }

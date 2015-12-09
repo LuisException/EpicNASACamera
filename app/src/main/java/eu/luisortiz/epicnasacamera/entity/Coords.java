@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 public class Coords {
 
     @SerializedName("centroid_coordinates")
-    private CentroidCoordinates centroidCoordinates;
+    private CentroidCoordinates centroid_coordinates;
 
     @SerializedName("dscovr_j2000_position")
     private DscovrJ2000Position dscovrJ2000Position;
@@ -20,11 +20,11 @@ public class Coords {
     private AttitudeQuaternions attitudeQuaternions;
 
     public CentroidCoordinates getCentroidCoordinates() {
-        return centroidCoordinates;
+        return centroid_coordinates;
     }
 
-    public void setCentroidCoordinates(CentroidCoordinates centroidCoordinates) {
-        this.centroidCoordinates = centroidCoordinates;
+    public void setCentroidCoordinates(CentroidCoordinates centroid_coordinates) {
+        this.centroid_coordinates = centroid_coordinates;
     }
 
     public DscovrJ2000Position getDscovrJ2000Position() {
